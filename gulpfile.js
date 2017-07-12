@@ -37,11 +37,16 @@ gulp.task('serve', function() {
   })
 })
 
+gulp.task('images', function() {
+  return gulp.src('./images/*.{png, jpg}')
+    .pipe(gulp.dest('dist/images/'));
+})
+
 gulp.task('watch', function () {
 	gulp.watch('styl/**/*.styl', ['stylus']).on('change', reload);
 	gulp.watch('*.html', ['htmlmin']).on('change', reload);
 });
 
 gulp.task('default', function(cb) {
-  return runSequence('clean', ['stylus', 'htmlmin', 'watch',  'serve'], cb);
+  return runSequence('clean', ['stylus', 'htmlmin', 'images', 'watch',  'serve'], cb);
 });
