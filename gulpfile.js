@@ -1,19 +1,18 @@
-var gulp = require('gulp'),
-    koutoSwiss = require('kouto-swiss'),
-    stylus = require('gulp-stylus'),
-    browserSync = require('browser-sync').create(),
-    htmlmin = require('gulp-htmlmin'),
-    clean = require('gulp-clean'),
-    runSequence = require('run-sequence'),
-    reload = browserSync.reload,
-    jeet = require('jeet');
+const gulp = require('gulp'),
+      koutoSwiss = require('kouto-swiss'),
+      stylus = require('gulp-stylus'),
+      browserSync = require('browser-sync').create(),
+      htmlmin = require('gulp-htmlmin'),
+      clean = require('gulp-clean'),
+      runSequence = require('run-sequence'),
+      reload = browserSync.reload,
+      jeet = require('jeet');
 
 gulp.task('clean', function() {
 	return gulp.src('dist/')
 		.pipe(clean());
 });
 
-/*Stylus task*/
 gulp.task('stylus', function() {
   gulp.src('styl/main.styl')
     .pipe(stylus({
