@@ -1,12 +1,12 @@
 const gulp = require('gulp'),
       koutoSwiss = require('kouto-swiss'),
+      rupture = require('rupture'),
       stylus = require('gulp-stylus'),
       browserSync = require('browser-sync').create(),
       htmlmin = require('gulp-htmlmin'),
       clean = require('gulp-clean'),
       runSequence = require('run-sequence'),
-      reload = browserSync.reload,
-      jeet = require('jeet');
+      reload = browserSync.reload;
 
 gulp.task('clean', function() {
 	return gulp.src('dist/')
@@ -16,7 +16,7 @@ gulp.task('clean', function() {
 gulp.task('stylus', function() {
   gulp.src('styl/main.styl')
     .pipe(stylus({
-      use: [koutoSwiss(), jeet()],
+      use: [koutoSwiss(), rupture()],
       compress: true
     }))
     .pipe(gulp.dest('dist/css/'));
