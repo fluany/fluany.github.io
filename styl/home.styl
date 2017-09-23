@@ -88,3 +88,26 @@
       a
         text-decoration none
         padding 15px 30px
+
+.fish-animation-1
+  width 46px
+  height 46px
+  position absolute
+  animation: fish-1 30s ease-in-out infinite;
+
+@keyframes fish-1 {
+	0% {
+		transform translateX(0)
+	}
+	50% {
+		transform translateX(200px)
+	}
+
+	51% {
+		transform translateX(200px) rotateY(180deg)
+	}
+
+	100% {
+		transform translateX(0) rotateY(180deg)
+	}
+}
