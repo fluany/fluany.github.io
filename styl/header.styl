@@ -1,6 +1,6 @@
 .title
   color #FFF
-  font-size 30px
+  font-size 1.8rem
   text-transform uppercase
   margin 30px auto
   text-align center
@@ -11,6 +11,8 @@
     margin 0 auto
     .topbar
       padding 30px 0
+      +mobile()
+        text-align center
       .logo-title
         display inline-block
         margin 0
@@ -43,6 +45,8 @@
         background #FFF
         color color-4
         letter-spacing 3px
+        +mobile()
+          display none
 .header
   background-color #6CEBDC
   background-image url('../images/background-home.png')
@@ -59,15 +63,24 @@
     h2
       @extend .title
       letter-spacing 2px
+      +mobile()
+        font-size 1.1rem
     p
       color #FFF
       letter-spacing 1px
       max-width 510px
       margin 0 auto 60px auto
+    .fluflu
+      animation: float 6s ease-in-out infinite;
+      +mobile()
+        max-width 80px
+        margin-top -30px
     .btn-download
       font-size 15px
       padding 13px 40px
       letter-spacing 2px
+      +mobile()
+        padding 13px 16px
     .arrow-panel
       width 53px
       margin 60px auto 0 auto
@@ -85,3 +98,15 @@
         margin 25px auto
         border 1px solid color-4
         border-radius 100%
+
+@keyframes float {
+	0% {
+		transform translatey(5px)
+	}
+	50% {
+		transform translatey(-15px)
+	}
+	100% {
+		transform translatey(5px)
+	}
+}

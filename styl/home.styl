@@ -1,6 +1,6 @@
 .title
   color color-4
-  font-size 30px
+  font-size 1.8rem
   text-transform uppercase
   width 610px
   margin 30px auto
@@ -26,12 +26,14 @@
       list-style none
       display flex
       max-width 1100px
-      margin 0 auto
+      margin 40px auto
       padding 0
+      +mobile()
+        flex-wrap wrap
       li
         color color-4
         text-align center
-        padding 50px
+        padding 20px 50px
         .browser-icon, .packlist-icon, .clock-icon
           width 80px
           height 80px
@@ -47,7 +49,8 @@
     h2
       @extend .title
       color color-5
-      width 700px
+      +mobile()
+        width 100%
       font-weight 300
       span
         font-weight bold
@@ -55,11 +58,12 @@
         @extend .description
     .review-app
       margin-top 40px
+      max-width 90%
 
   .otimize-section
     margin-top 40px
     h2
-      font-size 100px
+      font-size 6.2rem
       text-transform uppercase
       text-align center
       font-weight 300
@@ -69,6 +73,8 @@
         font-weight bold
       & + p
         @extend .description
+      +mobile()
+        font-size 2rem
   footer
     background color-3
     padding 160px 60px 35px 60px
