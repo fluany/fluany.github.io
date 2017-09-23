@@ -1,49 +1,87 @@
-header
-  max-width 1180px
-  margin 20px auto
-  .logo-title
-    display inline-block
-    margin 0
-    text-transform uppercase
-    letter-spacing 4px
-    .flu
-      color color-3
-      font-weight 200
-      &:after
-        content ""
-        width 20px
-        height 2px
-        background color-3
-        position absolute
-        margin-left -24px
-        margin-top 11px
-      &:before
-        content ""
-        width 10px
-        height 2px
-        background color-3
-        position absolute
-        margin-left 43px
-        margin-top 20px
-    .any
-      color color-1
-  .btn-download
-    font-size 11px
-    float right
-  .rocket-mini-icon
-    float right
-    width 50px
-    height 30px
-    margin-right 70px
-    animation 60s 1 rocket
-    animation-fill-mode forwards
-    z-index 1
-
-.btn
-  text-decoration none
-  padding 10px 27px
-  background color-1
+.title
   color #FFF
-  border-radius 4px
+  font-size 30px
   text-transform uppercase
-  font-size 13px
+  margin 30px auto
+  text-align center
+
+.topbar-container
+  .container
+    max-width 1110px
+    margin 0 auto
+    .topbar
+      padding 30px 0
+      .logo-title
+        display inline-block
+        margin 0
+        text-transform uppercase
+        letter-spacing 4px
+        .flu
+          color #FFF
+          font-weight 200
+          &:after
+            content ""
+            width 20px
+            height 2px
+            background #FFF
+            position absolute
+            margin-left -24px
+            margin-top 11px
+          &:before
+            content ""
+            width 10px
+            height 2px
+            background #FFF
+            position absolute
+            margin-left 43px
+            margin-top 20px
+        .any
+          color #FFF
+      .btn-download
+        font-size 11px
+        float right
+        background #FFF
+        color color-4
+        letter-spacing 3px
+.header
+  background-color #6CEBDC
+  background-image url('../images/background-home.png')
+  background-size cover
+  padding 110px 0 102px
+.container
+  max-width 790px
+  padding 0 20px
+  margin 0 auto
+  position relative
+  .banner-panel
+    margin 0 auto
+    text-align center
+    h2
+      @extend .title
+      letter-spacing 2px
+    p
+      color #FFF
+      letter-spacing 1px
+      max-width 510px
+      margin 0 auto 60px auto
+    .btn-download
+      font-size 15px
+      padding 13px 40px
+      letter-spacing 2px
+    .arrow-panel
+      width 53px
+      margin 60px auto 0 auto
+      .dot
+        width 6px
+        height 6px
+        background #FFF
+        display block
+        margin 10px auto
+        border-radius 100%
+      .arrow-bottom
+        width 40px
+        height 40px
+        cursor pointer
+        margin 25px auto
+        border 1px solid color-4
+        border-radius 100%
