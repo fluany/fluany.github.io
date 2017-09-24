@@ -89,11 +89,40 @@
         text-decoration none
         padding 15px 30px
 
-.fish-animation-1
+.fish-animation-1, .fish-animation-2, .fish-animation-3, .fish-animation-4
   width 46px
   height 46px
+  fill #269f9f
+  animation fish-1 30s ease-in-out infinite
   position absolute
+
+.fish-animation-1
   animation: fish-1 30s ease-in-out infinite;
+
+.fish-animation-2
+  top 50%
+  left 90%
+  fill #197575
+  animation: float 6s ease-in-out infinite;
+  animation-delay 2s
+  +mobile()
+    display none
+.fish-animation-3
+  left -70px
+  top: 20%
+  animation-delay 4s
+  +mobile()
+    top 10%
+.fish-animation-4
+  width 35px
+  fill #1e9090
+  height 35px
+  animation: float 6s ease-in-out infinite;
+  top 50%
+  animation-delay 2s
+  +mobile()
+    display none
+
 
 @keyframes fish-1 {
 	0% {
@@ -109,6 +138,18 @@
 
 	100% {
 		transform translateX(0) rotateY(180deg)
+	}
+}
+
+@keyframes float {
+	0% {
+		transform translatey(5px)
+	}
+	50% {
+		transform translatey(-8px)
+	}
+	100% {
+		transform translatey(5px)
 	}
 }
 
