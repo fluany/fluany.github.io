@@ -1,5 +1,6 @@
 const gulp = require('gulp'),
       koutoSwiss = require('kouto-swiss'),
+	    plumber     = require('gulp-plumber'),
 	    uglify      = require('gulp-uglify'),
 	    concat      = require('gulp-concat'),
       rupture = require('rupture'),
@@ -16,9 +17,9 @@ gulp.task('clean', function() {
 });
 
 gulp.task('js', function(){
-	return gulp.src('js/**/*.js')
+	return gulp.src('src/js/**/*.js')
 		.pipe(plumber())
-		.pipe(concat('main.js'))
+		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js/'))
 		.pipe(browserSync.reload({stream:true}))
@@ -59,5 +60,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function(cb) {
-  return runSequence('clean', ['stylus', 'htmlmin', 'images', 'watch',  'serve'], cb);
+  return runSequence('clean', ['stylus', 'js', 'htmlmin', 'images', 'watch',  'serve'], cb);
 });
