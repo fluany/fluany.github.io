@@ -49,13 +49,13 @@
         &:hover
           color #FFF
           background color-4
-        +mobile()
+        +below(780px)
           display none
 .header
   background-color #6CEBDC
   background-image url('../images/bg-header.png')
   background-size cover
-  padding 110px 0 102px
+  padding 100px 0 210px 0
 .container
   max-width 790px
   padding 0 20px
@@ -81,28 +81,10 @@
         margin-top -30px
     .btn-download
       font-size 15px
-      padding 13px 40px
+      padding 19px 40px
       letter-spacing 2px
       +mobile()
         padding 13px 16px
-    .arrow-panel
-      width 53px
-      margin 60px auto 0 auto
-      .dot
-        width 6px
-        height 6px
-        background #FFF
-        display block
-        margin 10px auto
-        border-radius 100%
-      .arrow-bottom
-        width 40px
-        height 40px
-        cursor pointer
-        margin 25px auto
-        border 1px solid color-4
-        border-radius 100%
-
 @keyframes float {
 	0% {
 		transform translatey(5px)
