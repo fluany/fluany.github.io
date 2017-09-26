@@ -3,15 +3,13 @@
   margin 0 auto
   display flex
   justify-content space-between
-  +mobile()
-    margin-top 20px
   h4
     color #FFF
     text-transform uppercase
     font-weight 400
     font-size .9rem
-    +mobile()
-      font-size .5rem
+    +below(780px)
+      font-size .8rem
       margin-top 6px
     margin 0
   ul
@@ -27,8 +25,8 @@
         color #FFF
         text-transform uppercase
         font-size .9rem
-        +mobile()
-          font-size .5rem
+        +below(780px)
+          font-size .8rem
         &:hover
           border-bottom 1px solid #FFF
 
@@ -48,7 +46,10 @@ footer
     a
       text-decoration none
       padding 15px 30px
-    +mobile()
-      width 215px
-  +mobile()
-    padding 40px 15px 25px 15px
+      +below(780px)
+        padding 15px 12px
+        +below(360px)
+          font-size .6rem
+  +below(780px)
+    padding 70px 15px 25px 15px
+    margin-top 50px

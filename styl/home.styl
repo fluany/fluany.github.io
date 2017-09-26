@@ -28,7 +28,7 @@
       max-width 1100px
       margin 40px auto
       padding 0
-      +mobile()
+      +below(780px)
         flex-wrap wrap
       li
         color color-4
@@ -46,11 +46,14 @@
           color color-gray
   .review-section
     text-align center
+    +below(780px)
+      padding 0 20px
     h2
       @extend .title
       color color-5
-      +mobile()
+      +below(780px)
         width 100%
+        font-size 1.4rem
       font-weight 300
       span
         font-weight bold
@@ -59,9 +62,13 @@
     .review-app
       margin-top 40px
       max-width 70%
+      +below(780px)
+        max-width 100%
 
   .otimize-section
     margin-top 40px
+    +below(780px)
+      padding 0 20px
     h2
       font-size 6.2rem
       text-transform uppercase
@@ -73,7 +80,7 @@
         font-weight bold
       & + p
         @extend .description
-      +mobile()
+      +below(780px)
         font-size 2rem
   footer
     background color-3
@@ -105,13 +112,13 @@
   fill #197575
   animation: float 6s ease-in-out infinite;
   animation-delay 2s
-  +mobile()
+  +below(780px)
     display none
 .fish-animation-3
   left -70px
   top: 20%
   animation-delay 4s
-  +mobile()
+  +below(780px)
     top 10%
 .fish-animation-4
   width 35px
@@ -120,7 +127,7 @@
   animation: float 6s ease-in-out infinite;
   top 50%
   animation-delay 2s
-  +mobile()
+  +below(780px)
     display none
 
 
