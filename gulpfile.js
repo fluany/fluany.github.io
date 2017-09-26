@@ -1,5 +1,7 @@
 const gulp = require('gulp'),
       koutoSwiss = require('kouto-swiss'),
+	    uglify      = require('gulp-uglify'),
+	    concat      = require('gulp-concat'),
       rupture = require('rupture'),
       stylus = require('gulp-stylus'),
       browserSync = require('browser-sync').create(),
@@ -13,8 +15,17 @@ gulp.task('clean', function() {
 		.pipe(clean());
 });
 
+gulp.task('js', function(){
+	return gulp.src('js/**/*.js')
+		.pipe(plumber())
+		.pipe(concat('main.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('dist/js/'))
+		.pipe(browserSync.reload({stream:true}))
+});
+
 gulp.task('stylus', function() {
-  gulp.src('styl/main.styl')
+  gulp.src('src/styl/main.styl')
     .pipe(stylus({
       use: [koutoSwiss(), rupture()],
       compress: true
@@ -37,12 +48,13 @@ gulp.task('serve', function() {
 })
 
 gulp.task('images', function() {
-  return gulp.src('./images/**/*')
+  return gulp.src('src/images/**/*')
     .pipe(gulp.dest('dist/images/'));
 })
 
 gulp.task('watch', function () {
-	gulp.watch('styl/**/*.styl', ['stylus']).on('change', reload);
+	gulp.watch('src/styl/**/*.styl', ['stylus']).on('change', reload);
+	gulp.watch('src/js/**/*.js', ['js']).on('change', reload);
 	gulp.watch('*.html', ['htmlmin']).on('change', reload);
 });
 
