@@ -3,6 +3,9 @@
   margin 0 auto
   display flex
   justify-content space-between
+  +below(780px)
+    display block
+    text-align center
   h4
     color #FFF
     text-transform uppercase
@@ -10,15 +13,19 @@
     font-size .9rem
     +below(780px)
       font-size .8rem
-      margin-top 6px
     margin 0
   ul
     padding 0
     margin 0
     list-style none
     display flex
+    +below(780px)
+      justify-content center
     li
       margin-left 14px
+      +below(780px)
+        margin 12px 20px
+      justify-content center
       a
         text-decoration none
         cursor pointer
@@ -51,5 +58,5 @@ footer
         +below(360px)
           font-size .6rem
   +below(780px)
-    padding 70px 15px 25px 15px
+    padding 60px 15px 25px 15px
     margin-top 50px
