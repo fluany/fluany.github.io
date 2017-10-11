@@ -6,7 +6,6 @@
     }else{
       element.addEventListener('click', function() {
         ga('send', 'event', 'link', 'click', 'Download');
-        chrome.webstore.install()
       });
     }
   })
