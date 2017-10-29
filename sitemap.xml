@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+  <loc>https://fluany.com/</loc>
+  <xhtml:link 
+     rel="alternate"
+     hreflang="en"
+     href="https://www.fluany.com/"
+     />
+  <lastmod>2017-10-29T00:59:38+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+
+<url>
+    <loc>https://www.fluany.com/pt/</loc>
+    <xhtml:link 
+     rel="alternate"
+     hreflang="pt-br"
+     href="https://www.fluany.com/pt/"
+     />
+     <lastmod>2017-10-29T00:59:38+00:00</lastmod>
+     <changefreq>monthly</changefreq>
+</url>
+  
+</urlset>
