@@ -30,7 +30,3 @@ gulp
 Now you're ready to do some work!
 
 The site is deployed automatically each time a commit is merged on the `source` branch.
-
-## LICENSE
-
-The code is available under the [MIT License](LICENSE).
