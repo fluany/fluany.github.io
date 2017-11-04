@@ -1,0 +1,105 @@
+.content-login
+  height 100%
+  display flex
+  .login-container
+    width 45%
+    &__header
+      padding-top 80px
+    &__logo
+      display: flex;
+      height: 140px;
+      align-items: center;
+      max-width: 174px;
+      margin: 0 auto;
+      .fluflu
+        max-width 70px
+        animation: float 6s ease-in-out infinite;
+      .login-container__fluany
+        font-size 27px
+        margin-left 5px
+        letter-spacing: 4px;
+        font-variant-ligatures: none;
+        .flu
+          color color-3
+          font-weight 300
+        .any
+          color color-4
+          font-weight 600
+    .welcome-container
+      max-width: 360px;
+      margin: 0 auto;
+      h1
+        text-align center
+        color color-3
+        margin 10px 0
+        font-size 37px
+      p
+        font-weight 300
+        color #68688c
+        font-size 13px
+        text-align center
+    .auth-content
+      max-width 210px
+      margin 0 auto
+      h3
+        text-align center
+        color #515198
+        font-size 12px
+        margin 20px 0
+      button
+        position relative
+        border none
+        margin-bottom 15px
+        cursor pointer
+        border-radius 4px
+        padding 14px 0
+        width 100%
+        color #FFF
+        font-size 14px
+        transition all .3s
+        &:before
+          content ""
+          background-position center
+          background-size 20px
+          width 44px
+          height 44px
+          position absolute
+          left 10px
+          top 0 
+      &__google
+        background google-color
+        &:before
+          background url('../images/google-icon.svg') no-repeat
+        &:hover
+          background darken(google-color, 10%)
+      &__facebook
+        background facebook-color
+        &:before
+          background url('../images/facebook-icon.svg') no-repeat
+        &:hover
+          background darken(facebook-color, 10%)
+      &__twitter
+        background twitter-color
+        &:before
+          background url('../images/twitter-icon.svg') no-repeat
+        &:hover
+          background darken(twitter-color, 10%)
+
+  .preview-container
+    width 55%
+    background url('../images/review-cover.png') no-repeat
+    background-size cover
+    padding-top 110px
+    text-align center
+    h2
+      font-size 30px
+      text-align center
+      text-transform uppercase
+      color #FFF
+      font-weight 300
+      max-width 400px
+      margin 0 auto
+    img
+      max-width 95%
+      max-height 390px
+      margin-top 20px
