@@ -1,10 +1,8 @@
 import axios from 'axios'
-const APP_ID = '2040055196220728'
-const API_URL = 'http://localhost:3000/api/v1/auth'
-
+import config from '../config'
 function fbInit(){
   FB.init({
-    appId      : APP_ID,
+    appId      : config.FACEBOOK_APP_ID,
     status     : false,
     cookie     : false,
     xfbml      : false,
@@ -20,7 +18,7 @@ function fbLogin(){
   return new Promise((resolve, reject) => {
     FB.login(result => {
       if (result.authResponse) {
-        return axios.post(`${API_URL}/facebook`,
+        return axios.post(`${config.API_URL}/facebook`,
                           { access_token: result.authResponse.accessToken })
           .then(response => resolve(response))
           .catch((error) => reject(error))

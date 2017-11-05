@@ -6,7 +6,6 @@ facebookBtn.addEventListener('click', function(){
   fbInit()
     .login()
     .then(response => {
-      console.log('response: ', response)
       var token = response.headers.get('x-auth-token')
       if (token) {
         console.log('saved')
