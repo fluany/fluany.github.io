@@ -1,12 +1,17 @@
-(function(){
-  var downloadButton = document.querySelectorAll('.btn-download');
-  downloadButton.forEach(function(element) {
-    if (chrome.app.isInstalled) {
-      element.style.display = 'none';
-    }else{
-      element.addEventListener('click', function() {
-        ga('send', 'event', 'link', 'click', 'Download');
-      });
-    }
-  })
-})()
+import './landingpage'
+import { fbLogin, fbInit } from './login/facebook'
+const facebookBtn = document.getElementById('facebook')
+
+facebookBtn.addEventListener('click', function(){
+  fbInit()
+    .login()
+    .then(response => {
+      console.log('response: ', response)
+      var token = response.headers.get('x-auth-token')
+      if (token) {
+        console.log('saved')
+        // localStorage.setItem('id_token', token)
+      }
+    })
+})
+

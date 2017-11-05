@@ -1,28 +1,36 @@
 const gulp = require('gulp'),
       koutoSwiss = require('kouto-swiss'),
-	    plumber     = require('gulp-plumber'),
 	    uglify      = require('gulp-uglify'),
-	    concat      = require('gulp-concat'),
       rupture = require('rupture'),
       stylus = require('gulp-stylus'),
       browserSync = require('browser-sync').create(),
       htmlmin = require('gulp-htmlmin'),
       clean = require('gulp-clean'),
       runSequence = require('run-sequence'),
+      babelify = require('babelify'),
+      browserify = require('browserify'),
+      buffer = require('vinyl-buffer'),
+      source = require('vinyl-source-stream'),
       reload = browserSync.reload;
+
+gulp.task('js', function () {
+  var bundler = browserify({
+    entries: 'src/js/app.js',
+    debug: true
+  });
+  bundler.transform(babelify);
+
+  bundler.bundle()
+    .on('error', function (err) { console.error(err); })
+    .pipe(source('app.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'));
+});
 
 gulp.task('clean', function() {
 	return gulp.src('dist/')
 		.pipe(clean());
-});
-
-gulp.task('js', function(){
-	return gulp.src('src/js/**/*.js')
-		.pipe(plumber())
-		.pipe(concat('main.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('dist/js/'))
-		.pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('stylus', function() {
