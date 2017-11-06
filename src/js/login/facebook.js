@@ -1,5 +1,6 @@
 import axios from 'axios'
 import config from '../config'
+
 function fbInit(){
   FB.init({
     appId      : config.FACEBOOK_APP_ID,
