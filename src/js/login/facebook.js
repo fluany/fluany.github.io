@@ -1,9 +1,9 @@
 import axios from 'axios'
-import config from '../config'
+import Config from '../config'
 
 function fbInit(){
   FB.init({
-    appId      : config.FACEBOOK_APP_ID,
+    appId      : Config.FB_APP_ID,
     status     : false,
     cookie     : false,
     xfbml      : false,
@@ -19,7 +19,7 @@ function fbLogin(){
   return new Promise((resolve, reject) => {
     FB.login(result => {
       if (result.authResponse) {
-        return axios.post(`${config.API_URL}/facebook`,
+        return axios.post(`${Config.API_URL}/facebook`,
                           { access_token: result.authResponse.accessToken })
           .then(response => resolve(response))
           .catch((error) => reject(error))

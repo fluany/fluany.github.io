@@ -6,7 +6,7 @@ facebookBtn.addEventListener('click', function(){
   fbInit()
     .login()
     .then(response => {
-      var token = response.headers.get('x-auth-token')
+      const token = response.headers['x-auth-token']
       if (token) {
         console.log('saved')
         // localStorage.setItem('id_token', token)
