@@ -1,12 +1,11 @@
-(function(){
-  var downloadButton = document.querySelectorAll('.btn-download')
-  downloadButton.forEach(function(element) {
-    if (chrome.app.isInstalled) {
-      element.style.display = 'none'
-    }else{
-      element.addEventListener('click', function() {
+function runLanding(){
+  const downloadButton = document.querySelectorAll('.btn-download')
+
+  downloadButton.forEach(element => {
+      element.addEventListener('click', () => {
         ga('send', 'event', 'link', 'click', 'Download')
       })
-    }
   })
-})()
+}
+
+export default runLanding
