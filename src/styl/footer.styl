@@ -1,8 +1,7 @@
 .footer-wrapper
   max-width 1010px
   margin 0 auto
-  display flex
-  justify-content space-between
+  text-align center
   +below(780px)
     display block
     text-align center
@@ -16,26 +15,23 @@
     margin 0
   ul
     padding 0
-    margin 0
+    max-width 170px
+    margin 0 auto 30px auto
     list-style none
     display flex
+    justify-content space-around
     +below(780px)
       justify-content center
     li
       margin-left 14px
+      &:first-child
+        margin-left 0
       +below(780px)
         margin 12px 20px
       justify-content center
       a
         text-decoration none
         cursor pointer
-        color #FFF
-        text-transform uppercase
-        font-size .9rem
-        +below(780px)
-          font-size .8rem
-        &:hover
-          border-bottom 1px solid #FFF
 
 footer
   background-color #6CEBDC
@@ -45,6 +41,9 @@ footer
   padding 160px 60px 35px 60px
   margin-top 50px
   position relative
+  .social-icon
+    width 25px
+    height 25px
   .add-chrome
     position absolute
     top -8px
