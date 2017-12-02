@@ -1,9 +1,7 @@
-import runLanding from './landingpage'
-import runLogin from './login'
-
-const isLogin = document.querySelector('.content-login')
-if(isLogin){
-  runLogin()
-}else {
-  runLanding()
-}
+const downloadButton = document.querySelectorAll('.btn-download')
+downloadButton.forEach(function(element){
+  element.addEventListener('click', () => {
+    console.log('clicked')
+    ga('send', 'event', 'link', 'click', 'Download')
+  })
+})
