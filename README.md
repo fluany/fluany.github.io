@@ -15,7 +15,8 @@
 | Question | Answer |
 |--------|-------|
 | "I have a question" | [Join the chat](https://gitter.im/fluany/)<br />Or<br />[Open an issue](https://github.com/fluany/fluany.github.io/issues/new)<br />
-Then<br />[Choose an issue marked "help wanted"](https://github.com/fluany/fluany.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) |
+| "I want to help build Fluany" | [Choose an issue marked "help wanted"](https://github.com/fluany/fluany.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) |
+
 
 
 ## Attention!
