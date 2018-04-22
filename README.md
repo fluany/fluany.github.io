@@ -6,7 +6,7 @@
 
 <div align="center">
   
-  <strong>This repository is a website to the [fluany](https://github.com/fluany/fluany). You can visit it [here](https://fluany.com/)</strong>
+  <strong>This repository is a website to the [fluany](https://github.com/fluany/fluany).</strong>
   
 </div>
 
@@ -15,8 +15,7 @@
 | Question | Answer |
 |--------|-------|
 | "I have a question" | [Join the chat](https://gitter.im/fluany/)<br />Or<br />[Open an issue](https://github.com/fluany/fluany.github.io/issues/new)<br />
-| "I found a bug" | [Open an issue](https://github.com/fluany/fluany.github.io/issues/new) |
-| "I want to help build Fluany's website" | [Contributing to Fluany](https://github.com/fluany/fluany/blob/master/CONTRIBUTING.md)<br />Then<br />[Choose an issue marked "help wanted"](https://github.com/fluany/fluany.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) |
+Then<br />[Choose an issue marked "help wanted"](https://github.com/fluany/fluany.github.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) |
 
 
 ## Attention!
